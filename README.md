@@ -1,2 +1,24 @@
 # QuickAPConnect
-QuickAPConnect is a lightweight library that makes it easy to set up an ESP32 as a WiFi Access Point and host basic HTML, CSS, and JavaScript content directly from the board. With only a few lines of code, you can create your own standalone wireless network for projects that need a simple web interface.
+
+**QuickAPConnect** makes it easy to turn your ESP32 into a WiFi Access Point and serve basic HTML, CSS, and JavaScript content – all with minimal setup.
+
+## Features
+
+- One-line setup to create an Access Point
+- Easy integration with ESP32 boards
+- Minimal boilerplate – plug-and-play use
+- Serve basic HTML/CSS/JS from the ESP32
+
+## Example
+
+```cpp
+#include <QuickAPConnect.h>
+
+void setup() {
+  Serial.begin(115200);
+  QuickAPConnect.begin("MyESP32AP", "mypassword");
+}
+
+void loop() {
+  QuickAPConnect.loop();
+}
